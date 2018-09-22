@@ -1,0 +1,62 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.curated-items {
+  margin-bottom: 100px;
+  
+  @include tablet {
+    display: flex;
+    padding-bottom: 200px;
+  }
+
+  a {
+    display: block;
+    margin-bottom: 30px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+
+    @include tablet {
+      margin-bottom: 0;
+      width: calc(100%/3);
+    }
+
+    &:nth-of-type(odd) {
+      h2 {
+        top: 15%;
+      }
+    }
+
+    &:nth-of-type(even) {
+
+      @include tablet {
+        transform: translateY(200px);
+      }
+
+      h2 {
+        top: 15%;
+
+        @include tablet {
+          bottom: 10%;
+          top: auto;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+
+      @include tablet {
+        width: 80%;
+      }
+    }
+
+    h2 {
+      color: $color-black;
+      font-weight: normal;
+      position: absolute;
+      right: 0;
+      z-index: 1;
+    }
+  }
+}

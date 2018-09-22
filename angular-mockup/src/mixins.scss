@@ -1,0 +1,36 @@
+$screen-xs: 480px !default;
+$screen-sm: 768px !default;
+$screen-md: 1020px !default;
+$screen-lg: 1280px !default;
+$screen-xl: 1600px !default;
+
+// Mixins
+@mixin mobile {
+  @media (min-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin monitor {
+  @media (min-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin display {
+  @media (min-width: #{$screen-xl}) {
+    @content;
+  }
+}

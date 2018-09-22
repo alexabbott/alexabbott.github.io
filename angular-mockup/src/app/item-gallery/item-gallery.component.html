@@ -1,0 +1,27 @@
+<div class="item-gallery">
+  <h2>Curated For You</h2>
+  <div class="items">
+    <a href="/" class="item" *ngFor="let image of images">
+      <img [src]="url + image" (load)="loadMore()">
+      <div class="item-info">
+        <div class="left">
+          <div class="posted">
+            1 minute ago
+          </div>
+          <div class="title">
+            Fear of Jerry
+          </div>
+          <div class="description">
+            Oversized Striped Tee
+          </div>
+          <div class="cost">
+            $240
+          </div>
+        </div>
+        <div class="size">
+          M
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.item-gallery {
+  h2 {
+    font-weight: normal;
+    text-align: center;
+  }
+
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    margin: 0 0 30px 0;
+    text-decoration: none;
+    width: 100%;
+    
+    @include tablet {
+      margin: 0 2% 30px 2%;
+      width: 46%;
+    }
+
+    @include desktop {
+      width: 21%;
+    }
+
+    img {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    .item-info {
+      color: $color-black;
+      display: flex;
+    }
+
+    .posted {
+      font-size: .8em;
+      margin-bottom: 8px;
+    }
+
+    .title {
+      margin-bottom: 8px;
+    }
+
+    .description {
+      font-size: .9em;
+      margin-bottom: 8px;
+    }
+
+    .cost {
+      font-size: .9em;
+      font-weight: bold;
+    }
+
+    .size {
+      flex-grow: 1;
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.hero {
+  height: 500px;
+  margin-bottom: 100px;
+  position: relative;
+
+  .hero-text {
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      max-width: 40%;
+    }
+
+    .eyebrow {
+      font-size: .8em;
+      padding-top: 30px;
+      text-transform: uppercase;
+
+      @include desktop {
+        padding-top: 0;
+      }
+    }
+
+    h1 {
+      font-size: 3em;
+      font-weight: normal;
+      line-height: 1.2;
+      margin: 15px 0 10px 0;
+    }
+
+    p {
+      font-family: $font-serif;
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin-bottom: auto;
+    }
+
+    .cta {
+      display: block;
+      color: $color-black;
+      font-size: 1.6em;
+      margin-top: 30px;
+
+      @include tablet {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .hero-image {
+    height: 100%;
+    position: absolute;
+    right: -30px;
+    top: 0;
+
+    img {
+      height: 100%;
+      opacity: .5;
+
+      @include tablet {
+        opacity: 1;
+      }
+    }
+  }
+}
